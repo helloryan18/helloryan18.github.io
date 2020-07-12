@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Code Dog&#39;s Bolg</title>
+    <title>🐶 My Code Dog ❤️ on Code Dog&#39;s Bolg</title>
     <link>https://helloryan18.github.io/</link>
-    <description>Recent content on Code Dog&#39;s Bolg</description>
+    <description>Recent content in 🐶 My Code Dog ❤️ on Code Dog&#39;s Bolg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2020 23:03:45 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 02:19:34 -0700</lastBuildDate>
     
 	<atom:link href="https://helloryan18.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,21 +21,21 @@
     </item>
     
     <item>
-      <title>Get In Touch</title>
+      <title>☎️ Get In Touch 📮</title>
       <link>https://helloryan18.github.io/contact/</link>
       <pubDate>Sat, 11 Jul 2020 00:35:39 -0700</pubDate>
       
       <guid>https://helloryan18.github.io/contact/</guid>
-      <description>Oakland, CA, USA. 94606</description>
+      <description>Contact info</description>
     </item>
     
     <item>
-      <title>Hello Code Dog</title>
-      <link>https://helloryan18.github.io/blog/myfirst/</link>
-      <pubDate>Fri, 10 Jul 2020 23:03:45 -0700</pubDate>
+      <title></title>
+      <link>https://helloryan18.github.io/blog/test/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://helloryan18.github.io/blog/myfirst/</guid>
-      <description>Hello Code Dog &amp;lt;/&amp;gt; </description>
+      <guid>https://helloryan18.github.io/blog/test/test/</guid>
+      <description></description>
     </item>
     
   </channel>
