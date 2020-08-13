@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>时钟</title>
+	</head>
+	<body>
+		<div id="time"></div>
+		<script type="text/javascript">
+			function now_time(){
+				let now = new Date();
+				let year = now.getFullYear() + "年";
+				let month = now.getMonth() + 1 + "月";
+				let date = now.getDate() + "日";
+				let day = now.getDay();
+				let dayArr = ["一", "二", "三", "四", "五", "六", "日"];
+				day = " 星期" + dayArr[day];
+				
+				let hour = now.getHours();
+				let minute = now.getMinutes();
+				let second = now.getSeconds();
+				
+				if (hour < 10) hour = "0" + hour;
+				if (minute < 10) minute = "0" + minute;
+				if (second < 10) second = "0" + second;
+				
+				let time = year + month + date + day + hour + ":" + minute + ":" + second;
+				
+				document.getElementById("time").innerHTML = time + "";
+				
+			}
+			
+			setInterval("now_time()", 200);
+		</script>
+	</body>
+</html>
