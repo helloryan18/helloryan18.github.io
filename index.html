@@ -18,26 +18,27 @@
 				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
+				padding: 0px;
 			}
 			.nowDate2{
 				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
+				padding: 0px;
 			}
 			.nowDate3{
 				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
+				padding: 0px;
 			}
 		</style>
 		<script type="text/javascript">
-			window.onload = function(){
-				document.getElementById("yyyy").innerHTML = "<img src='img/0-9/year.png' style='height: 88px;' />";
-				document.getElementById("MM").innerHTML = "<img src='img/0-9/month.png' style='height: 88px;'/>";
-				document.getElementById("dd").innerHTML = "<img src='img/0-9/day.png' style='height: 88px;'/>";
-				document.getElementsByClassName("time_sep")[0].innerHTML = "<img src='img/0-9/time_sep.png' style='height: 88px;' />";
-				document.getElementsByClassName("time_sep")[1].innerHTML = "<img src='img/0-9/time_sep.png' style='height: 88px;' />";
-			}
+			
+			
+			
+			
+			
 		</script>
 	</head>
 	<body>
@@ -95,7 +96,10 @@
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2"></div>
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy3"></div>
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy4"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy">
+					<img src="img/0-9/year.png" style="height: 90px;">
+				</div>
+				
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2" id="week"></div>
 				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
@@ -104,16 +108,21 @@
 			<!-- 30 像素分割 -->
 			<div id="date_sep" style="height: 30px;"></div>
 			
+			
 			<!-- 第二行：显示日期 -->
 			<!-- 口XX月口XX日口星期口 -->
 			<div class="row">
 				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
 				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM1"></div>
 				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM2"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM">
+					<img src="img/0-9/month.png" style="height: 90px;" >
+				</div>
 				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd1"></div>
 				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd2"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd">
+					<img src="img/0-9/day.png" style="height: 90px;">
+				</div>
 				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
 			</div>
 			
@@ -126,10 +135,14 @@
 				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh1"></div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh2"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1 time_sep"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_1" style="background-color: white;">
+					<img src="img/0-9/time_sep.png" height="90px" style="display: none;">
+				</div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm1"></div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm2"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1 time_sep"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_2" style="background-color: white;">
+					<img src="img/0-9/time_sep.png" height="90px" style="display: none;">
+				</div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss1"></div>
 				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss2"></div>
 				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
@@ -168,30 +181,30 @@
 				let s1 = Math.floor(second / 10);
 				let s2 = Math.floor(second % 10);
 				
-				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 88px;' />";
-				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 88px;' />";
-				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 88px;' />";
-				document.getElementById("yyyy4").innerHTML = "<img src='img/0-9/time-" + y4 + ".png' style='height: 88px;' />";
+				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy4").innerHTML = "<img src='img/0-9/time-" + y4 + ".png' style='height: 90px;' />";
 				
-				document.getElementById("MM1").innerHTML = "<img src='img/0-9/time-" + M1 + ".png' style='height: 88px;' />";
-				document.getElementById("MM2").innerHTML = "<img src='img/0-9/time-" + M2 + ".png' style='height: 88px;' />";
+				document.getElementById("MM1").innerHTML = "<img src='img/0-9/time-" + M1 + ".png' style='height: 90px;' />";
+				document.getElementById("MM2").innerHTML = "<img src='img/0-9/time-" + M2 + ".png' style='height: 90px;' />";
 				
-				document.getElementById("dd1").innerHTML = "<img src='img/0-9/time-" + d1 + ".png' style='height: 88px;' />";
-				document.getElementById("dd2").innerHTML = "<img src='img/0-9/time-" + d2 + ".png' style='height: 88px;' />";
+				document.getElementById("dd1").innerHTML = "<img src='img/0-9/time-" + d1 + ".png' style='height: 90px;' />";
+				document.getElementById("dd2").innerHTML = "<img src='img/0-9/time-" + d2 + ".png' style='height: 90px;' />";
 				
-				document.getElementById("hh1").innerHTML = "<img src='img/0-9/time-" + h1 + ".png' style='height: 88px;' />";
-				document.getElementById("hh2").innerHTML = "<img src='img/0-9/time-" + h2 + ".png' style='height: 88px;' />";
+				document.getElementById("hh1").innerHTML = "<img src='img/0-9/time-" + h1 + ".png' style='height: 90px;' />";
+				document.getElementById("hh2").innerHTML = "<img src='img/0-9/time-" + h2 + ".png' style='height: 90px;' />";
 				
-				document.getElementById("mm1").innerHTML = "<img src='img/0-9/time-" + m1 + ".png' style='height: 88px;' />";
-				document.getElementById("mm2").innerHTML = "<img src='img/0-9/time-" + m2 + ".png' style='height: 88px;' />";
+				document.getElementById("mm1").innerHTML = "<img src='img/0-9/time-" + m1 + ".png' style='height: 90px;' />";
+				document.getElementById("mm2").innerHTML = "<img src='img/0-9/time-" + m2 + ".png' style='height: 90px;' />";
 				
-				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 88px;' />";
-				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 88px;' />";
+				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 90px;' />";
+				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 90px;' />";
 				
 				document.getElementById("week").innerHTML = "<img src='img/0-9/day-" + day + ".png' style='height: 78px;' />";
 				
 			}
-			setInterval("get_time()", 1002);
+			setInterval("get_time()", 1000);
 			
 			
 		</script>
