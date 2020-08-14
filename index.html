@@ -13,26 +13,23 @@
 		<style>
 			#clock_display{
 				border: 0px solid red;
-				margin-left: 5px;
-				margin-right: 5px;
+				margin-left: 0px;
+				margin-right: 0px;
 			}
 			.nowDate1{
 				border: 1px solid blue;
 				height: 90px;
 				text-align: center;
-				padding-top: 20px;
 			}
 			.nowDate2{
 				border: 1px solid blue;
 				height: 90px;
 				text-align: center;
-				padding-top: 20px;
 			}
 			.nowDate3{
 				border: 1px solid blue;
 				height: 90px;
 				text-align: center;
-				padding-top: 20px;
 			}
 		</style>
 	</head>
@@ -117,7 +114,7 @@
 					blank
 				</div>
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy1">
-					y1
+					
 				</div>
 				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2">
 					y2
@@ -135,6 +132,9 @@
 					blank
 				</div>
 			</div>
+			
+			<!-- 30 像素分割 -->
+			<div id="date_sep" style="height: 30px;"></div>
 			
 			<!-- 第二行：显示日期 -->
 			<!-- 口XX月口XX日口星期口 -->
@@ -174,6 +174,9 @@
 				</div>
 				
 			</div>
+			
+			<!-- 30 像素分割 -->
+			<div id="date_sep" style="height: 30px;"></div>
 			
 			<!-- 第三行：显示时间 -->
 			<!-- 口口XX：XX：XX口口 -->
@@ -243,31 +246,49 @@
 				let s1 = Math.floor(second / 10);
 				let s2 = Math.floor(second % 10);
 				
-				document.getElementById("yyyy1").innerHTML = y1;
-				document.getElementById("yyyy2").innerHTML = y2;
-				document.getElementById("yyyy3").innerHTML = y3;
-				document.getElementById("yyyy4").innerHTML = y4;
+				// document.getElementById("yyyy1").innerHTML = y1;
+				// document.getElementById("yyyy2").innerHTML = y2;
+				// document.getElementById("yyyy3").innerHTML = y3;
+				// document.getElementById("yyyy4").innerHTML = y4;
 				
-				document.getElementById("MM1").innerHTML = M1;
-				document.getElementById("MM2").innerHTML = M2;
+				// document.getElementById("MM1").innerHTML = M1;
+				// document.getElementById("MM2").innerHTML = M2;
 				
-				document.getElementById("dd1").innerHTML = d1;
-				document.getElementById("dd2").innerHTML = d2;
+				// document.getElementById("dd1").innerHTML = d1;
+				// document.getElementById("dd2").innerHTML = d2;
 				
-				document.getElementById("hh1").innerHTML = h1;
-				document.getElementById("hh2").innerHTML = h2;
+				// document.getElementById("hh1").innerHTML = h1;
+				// document.getElementById("hh2").innerHTML = h2;
 				
-				document.getElementById("mm1").innerHTML = m1;
-				document.getElementById("mm2").innerHTML = m2;
+				// document.getElementById("mm1").innerHTML = m1;
+				// document.getElementById("mm2").innerHTML = m2;
 				
-				document.getElementById("ss1").innerHTML = s1;
-				document.getElementById("ss2").innerHTML = s2;
+				// document.getElementById("ss1").innerHTML = s1;
+				// document.getElementById("ss2").innerHTML = s2;
 				
+				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 88px;' />";
+				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 88px;' />";
+				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 88px;' />";
+				document.getElementById("yyyy4").innerHTML = "<img src='img/0-9/time-" + y4 + ".png' style='height: 88px;' />";
 				
+				document.getElementById("MM1").innerHTML = "<img src='img/0-9/time-" + M1 + ".png' style='height: 88px;' />";
+				document.getElementById("MM2").innerHTML = "<img src='img/0-9/time-" + M2 + ".png' style='height: 88px;' />";
+				
+				document.getElementById("dd1").innerHTML = "<img src='img/0-9/time-" + d1 + ".png' style='height: 88px;' />";
+				document.getElementById("dd2").innerHTML = "<img src='img/0-9/time-" + d2 + ".png' style='height: 88px;' />";
+				
+				document.getElementById("hh1").innerHTML = "<img src='img/0-9/time-" + h1 + ".png' style='height: 88px;' />";
+				document.getElementById("hh2").innerHTML = "<img src='img/0-9/time-" + h2 + ".png' style='height: 88px;' />";
+				
+				document.getElementById("mm1").innerHTML = "<img src='img/0-9/time-" + m1 + ".png' style='height: 88px;' />";
+				document.getElementById("mm2").innerHTML = "<img src='img/0-9/time-" + m2 + ".png' style='height: 88px;' />";
+				
+				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 88px;' />";
+				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 88px;' />";
 				
 				
 			}
-			setInterval("get_time()", 200);
+			setInterval("get_time()", 1000);
 			
 			
 		</script>
