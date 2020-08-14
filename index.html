@@ -13,25 +13,32 @@
 		<style>
 			#clock_display{
 				border: 0px solid red;
-				margin-left: 0px;
-				margin-right: 0px;
 			}
 			.nowDate1{
-				border: 1px solid blue;
+				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
 			}
 			.nowDate2{
-				border: 1px solid blue;
+				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
 			}
 			.nowDate3{
-				border: 1px solid blue;
+				border: 0px solid blue;
 				height: 90px;
 				text-align: center;
 			}
 		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.getElementById("yyyy").innerHTML = "<img src='img/0-9/year.png' style='height: 88px;' />";
+				document.getElementById("MM").innerHTML = "<img src='img/0-9/month.png' style='height: 88px;'/>";
+				document.getElementById("dd").innerHTML = "<img src='img/0-9/day.png' style='height: 88px;'/>";
+				document.getElementsByClassName("time_sep")[0].innerHTML = "<img src='img/0-9/time_sep.png' style='height: 88px;' />";
+				document.getElementsByClassName("time_sep")[1].innerHTML = "<img src='img/0-9/time_sep.png' style='height: 88px;' />";
+			}
+		</script>
 	</head>
 	<body>
 
@@ -74,63 +81,20 @@
 		</nav>
 
 
-		<!-- 时间显示 -->
-		<h1>
-			<hr >
-			<div id="time"></div>
-			<hr >
-		</h1>
-		<script type="text/javascript">
-			function now_time() {
-				now = new Date();
-				let year = now.getFullYear() + "年";
-				let month = now.getMonth() + 1 + "月";
-				let date = now.getDate() + "日";
-				let day = now.getDay();
-				let dayArr = ["一", "二", "三", "四", "五", "六", "日"];
-				day = " 星期" + dayArr[day - 1];
-
-				let hour = now.getHours();
-				let minute = now.getMinutes();
-				let second = now.getSeconds();
-
-				if (hour < 10) hour = "0" + hour;
-				if (minute < 10) minute = "0" + minute;
-				if (second < 10) second = "0" + second;
-
-				let time = year + month + date + day + "  " + hour + ":" + minute + ":" + second;
-
-				document.getElementById("time").innerHTML = time;
-
-			}
-			setInterval("now_time()", 200);
-		</script>
 		
-		<div id="clock_display">
+		<div id="clock_display" >
 			<!-- 第一行：显示年份 -->
 			<!-- 口口口XXXX年口口口口 -->
 			<div class="row">
-				<div class="nowDate1 col-lg-3 col-md-3 col-sm-3 col-xs-3">
-					blank
-				</div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy1">
-					
-				</div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2">
-					y2
-				</div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy3">
-					y3
-				</div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy4">
-					y4
-				</div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy">
-					年
-				</div>
-				<div class="nowDate1 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-					blank
-				</div>
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy1"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy3"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy4"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2" id="week"></div>
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 			</div>
 			
 			<!-- 30 像素分割 -->
@@ -139,40 +103,14 @@
 			<!-- 第二行：显示日期 -->
 			<!-- 口XX月口XX日口星期口 -->
 			<div class="row">
-				<div class="nowDate2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-					blank
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM1">
-					m1
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM2">
-					m2
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM">
-					月
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1">
-					-
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd1">
-					d1
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd2">
-					d2
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd">
-					日
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1">
-					-
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="week">
-					周
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1">
-					-
-				</div>
-				
+				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM1"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM2"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd1"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd2"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd"></div>
+				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
 			</div>
 			
 			<!-- 30 像素分割 -->
@@ -181,36 +119,16 @@
 			<!-- 第三行：显示时间 -->
 			<!-- 口口XX：XX：XX口口 -->
 			<div class="row">
-				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-					blank
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh1">
-					H1
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh2">
-					H2
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep">
-					:
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm1">
-					M1
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm2">
-					M2
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep">
-					:
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss1">
-					S1
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss2">
-					S2
-				</div>
-				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-					blank
-				</div>
+				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1 time_sep"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1 time_sep"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss2"></div>
+				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
 			</div>
 		</div>
 		<!-- 计算出数字 -->
@@ -246,26 +164,6 @@
 				let s1 = Math.floor(second / 10);
 				let s2 = Math.floor(second % 10);
 				
-				// document.getElementById("yyyy1").innerHTML = y1;
-				// document.getElementById("yyyy2").innerHTML = y2;
-				// document.getElementById("yyyy3").innerHTML = y3;
-				// document.getElementById("yyyy4").innerHTML = y4;
-				
-				// document.getElementById("MM1").innerHTML = M1;
-				// document.getElementById("MM2").innerHTML = M2;
-				
-				// document.getElementById("dd1").innerHTML = d1;
-				// document.getElementById("dd2").innerHTML = d2;
-				
-				// document.getElementById("hh1").innerHTML = h1;
-				// document.getElementById("hh2").innerHTML = h2;
-				
-				// document.getElementById("mm1").innerHTML = m1;
-				// document.getElementById("mm2").innerHTML = m2;
-				
-				// document.getElementById("ss1").innerHTML = s1;
-				// document.getElementById("ss2").innerHTML = s2;
-				
 				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 88px;' />";
 				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 88px;' />";
 				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 88px;' />";
@@ -286,9 +184,10 @@
 				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 88px;' />";
 				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 88px;' />";
 				
+				document.getElementById("week").innerHTML = "<img src='img/0-9/day-1.png' style='height: 78px;' />";
 				
 			}
-			setInterval("get_time()", 1000);
+			setInterval("get_time()", 1002);
 			
 			
 		</script>
