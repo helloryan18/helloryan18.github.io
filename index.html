@@ -142,7 +142,7 @@
 				let year = now.getFullYear();
 				let month = now.getMonth() + 1;
 				let date = now.getDate();
-				let day = now.getDay() - 1;
+				let day = now.getDay();
 			
 				let hour = now.getHours();
 				let minute = now.getMinutes();
@@ -188,7 +188,7 @@
 				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 88px;' />";
 				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 88px;' />";
 				
-				document.getElementById("week").innerHTML = "<img src='img/0-9/day-1.png' style='height: 78px;' />";
+				document.getElementById("week").innerHTML = "<img src='img/0-9/day-" + day + ".png' style='height: 78px;' />";
 				
 			}
 			setInterval("get_time()", 1002);
