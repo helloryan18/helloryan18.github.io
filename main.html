@@ -11,31 +11,34 @@
 		<script src="./js/bootstrap.js"></script>
 		<script src="./js/jweixin-1.5.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="./js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<style type="text/css">
-			div{
+			div {
 				border: 1px solid red;
 			}
+
+			.item-image {}
 		</style>
-		<script type="text/javascript">
-			window.onload=function(){
-				
-			}
-		</script>
 	</head>
 
 	<body>
 		<div id="head">
-			<div id="head-video" >
-				<video autoplay="autoplay" controls="controls" style="object-fit: fill; width: 100%; height: 230px; align-items: center;" >
-					<source src="./img/format/1597690549967671.mp4" type="video/mp4"></source>
-				</video>
-			</div>
-			<div id="head-img" >
-				<img src="img/format/heading.jpg" width="100%" height="">
-			</div>
+			<video id="head-video" controls="controls" playsinline style="object-fit: fill; width: 100%; height: 210px; align-items: center;"
+			 poster="img/format/heading.jpg">
+				<source src="./img/format/1597690549967671.mp4" type="video/mp4">
+				</source>
+			</video>
+			<img src="img/format/heading.jpg" id="head-image" width="100%" height="210px" style="display: none;">
 		</div>
 		<script type="text/javascript">
-			
+			var headVideo = document.getElementById("head-video");
+			headVideo.addEventListener('loadstart', function() {
+				this.controls = "";
+			}, false);
+			headVideo.addEventListener('ended', function() {
+				this.style.display = "none";
+				document.getElementById("head-image").style.display = "";
+			}, false);
 		</script>
 
 		<!-- 导航条 -->
@@ -75,50 +78,124 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-		
-		<main class="main">
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-			<section class="list-item">
-				<div class="item-image">
-					<img src="" alt="">
-				</div>
-			</section>
-		</main>
-		
-		
-		
-		
-		
+		<div>
+			<main class="main">
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/D58490D0-5B5F-4933-BE5F-CED546F5D131_1_105_c.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+							AAA
+						</div>
+						<div class="text-desc">
+							aaaaaaaaaaa
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="./img/indexPage/06B891D2-0FD9-495E-8DFD-93C7D60E2DD5_1_105_c.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/03DD2FDD-2823-49E0-AFA2-9D81B5BE68BC_1_201_a.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/0A8854E8-8828-408A-A4C3-8B1165EBB9BE.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/41A3AE98-CBF1-4C8F-B1EF-88A428780147_1_105_c.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/17DA2AD0-BC05-4DC9-B678-8C4F5719CA0A_1_105_c.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/C690F00F-D8D0-46AA-89B4-23C80FC09881_1_201_a.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+				<section class="list-item">
+					<div class="item-image">
+						<img src="img/indexPage/497E973E-9966-4FA7-B881-61710ECDA3B2_1_105_c.jpeg" alt="">
+					</div>
+					<div class="item-text">
+						<div class="text-title">
+
+						</div>
+						<div class="text-desc">
+
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+
+
+
+
 		<!-- 页脚 -->
 		<hr style="margin-top: 30px;">
 		<div style="text-align: center; margin-bottom:20px;">
 			Copyright &copy; <a href="#">2019-2020</a> RyanFeng.AllRightsReserved.
 		</div>
-		
+
 	</body>
 
 </html>
