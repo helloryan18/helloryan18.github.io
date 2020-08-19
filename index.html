@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>密码输入页面</title>
+		<title>验证页面</title>
 		<!-- Bootstrap -->
 		<link href="./css/bootstrap.css" rel="stylesheet">
 
@@ -41,59 +41,18 @@
 			}
 		</style>
 		<script type="text/javascript">
-			alert("aaa");
+			// alert("aaa");
 		</script>
 	</head>
 
 	<body>
 
-		<div>
-			<img src="img/format/heading.jpg" style="width: 100%;" />
-		</div>
-
-		<!-- 导航条 -->
-		<nav class="navbar navbar-inverse" style="margin-top: 2px; margin-bottom: 30px;">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					 aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#" style="font-size: 25px;">首页</a>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class=""><a href="#" style="font-size: 16px;">敬请期待。。。</a></li>
-						<!-- <li class="active"><a href="#" style="font-size: 18px;">Page 2</a></li> -->
-						<!-- <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-							<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul>
-					</li> -->
-					</ul>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
 
 		<div id="content">
 			<!-- 子菜单栏 -->
 			<ul class="nav nav-tabs" style="margin-left: 100px;">
-				<li role="presentation" id="sub_select_1" onclick="select_1()" class="active"><a href="#">输入密码</a></li>
-				<li role="presentation" id="sub_select_2" onclick="select_2()" class=""><a href="#">密码说明</a></li>
+				<li role="presentation" id="sub_select_1" onclick="select_1()" class="active"><a href="#" style="font-size: 20px; font-weight: 500;">输入密码</a></li>
+				<li role="presentation" id="sub_select_2" onclick="select_2()" class=""><a href="#" style="font-size: 20px; font-weight: 500;">密码说明</a></li>
 			</ul>
 			<!-- 密码输入选项内容 -->
 			<div id="psw-input" style="padding-bottom: 200px;">
@@ -102,26 +61,28 @@
 				  <input type="text" class="form-control" id="password" placeholder="点击上方查看密码说明" aria-describedby="basic-addon1" style="width: 300px;">
 				</div>
 				<button type="button" id="submit_button" onclick="submit()">
-					<span style="font-size: 20px;">确认提交</span>
+					<a href="#" id="submit-ref"><span style="font-size: 20px; color: deeppink;">确认提交</span></a>
 				</button>
 			</div>
 			<!-- 密码说明内容 -->
 			<div id="psw-desc" style="display: none; margin-left: 100px; padding-bottom: 150px;">
 				<ol>
 					<hr >
-					<li class="desc-li">密码由纯数字组成</li>
+					<li class="desc-li">密码由纯数字组成.</li>
 					<hr >
-					<li class="desc-li">密码一共8位</li>
+					<li class="desc-li">密码一共8位.</li>
 					<hr >
-					<li class="desc-li">密码的加密次数仅1次</li>
+					<li class="desc-li">密码的加密次数仅1次.</li>
 					<hr >
-					<li class="desc-li">密码提示获取范围：本网页</li>
+					<li class="desc-li">密码提示获取范围：本网页.</li>
 					<hr >
-					<li class="desc-li">不要放过任何细节</li>
+					<li class="desc-li">注意.</li>
 					<hr >
-					<li class="desc-li">不要放过任何细节</li>
+					<li class="desc-li">不要放过任何细节.</li>
 					<hr >
-					<li class="desc-li">不要放过任何细节</li>
+					<li class="desc-li">不要放过任何细节.</li>
+					<hr >
+					<li class="desc-li">不要放过任何细节.</li>
 					<hr >
 				</ol>
 			</div>
@@ -149,7 +110,7 @@
 				var password = document.getElementById("password").value;
 				// 密码校对
 				if (password == "06061018") {
-					alert("密码输入正确");
+					document.getElementById("submit-ref").setAttribute("href", "./main.html");
 				} else{
 					alert("密码输入错误");
 				}
