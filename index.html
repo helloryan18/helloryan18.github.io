@@ -2,45 +2,50 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>首页</title>
+		<title>密码输入页面</title>
 		<!-- Bootstrap -->
 		<link href="./css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 		<script src="./js/jquery-1.11.3.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="./js/bootstrap.js"></script>
 		<script src="./js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<style>
-			#clock_display{
-				border: 0px solid red;
-			}
-			.nowDate1{
-				border: 0px solid blue;
-				height: 90px;
-				text-align: center;
-				padding: 0px;
-			}
-			.nowDate2{
-				border: 0px solid blue;
-				height: 90px;
-				text-align: center;
-				padding: 0px;
-			}
-			.nowDate3{
-				border: 0px solid blue;
-				height: 90px;
-				text-align: center;
-				padding: 0px;
+			body{
+				width: 95%;
+				margin: 2.5%;
 			}
 			
+			#content{
+				background-image: url(img/format/bgImg.png);
+				border-radius: 20px;
+			}
 			
+			#submit_button{
+				width: 120px; 
+				height: 60px; 
+				position: absolute; 
+				background: linear-gradient(to right, #6eb46e, 10%, #55b455); 
+				border-radius: 40px;
+				opacity: .88;
+				cursor: pointer;
+				transition: 1s;
+				margin-top: 50px;
+				margin-left: 200px;
+			}
+			
+			.desc-li{
+				color: firebrick;
+				font-size: 17px;
+				font-weight: 700;
+			}
 		</style>
 	</head>
+
 	<body>
-		
+
 		<div>
-			<img src="img/format/heading.jpg"  style="width: 100%;"/>
+			<img src="img/format/heading.jpg" style="width: 100%;" />
 		</div>
 
 		<!-- 导航条 -->
@@ -61,154 +66,94 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="#" style="font-size: 18px;">Page 1 </a></li>
-						<li class=""><a href="#" style="font-size: 18px;">Page 2</a></li>
+						<li class=""><a href="#" style="font-size: 16px;">敬请期待。。。</a></li>
+						<!-- <li class="active"><a href="#" style="font-size: 18px;">Page 2</a></li> -->
 						<!-- <li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
-								<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#">One more separated link</a></li>
-							</ul>
-						</li> -->
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+							<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li> -->
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
-
-		<!-- 美国时间显示 -->
-		<div id="clock_display" style="background-image: url(img/format/bgImg.png); height: 400px; padding-top: 20px;">
-			<!-- 第一行：显示年份 -->
-			<!-- 口口口XXXX年口口口口 -->
-			<div class="row">
-				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy1"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy3"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy4"></div>
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy">
-					<img src="img/0-9/year.png" style="height: 90px;">
+		<div id="content">
+			<!-- 子菜单栏 -->
+			<ul class="nav nav-tabs" style="margin-left: 100px;">
+				<li role="presentation" id="sub_select_1" onclick="select_1()" class="active"><a href="#">输入密码</a></li>
+				<li role="presentation" id="sub_select_2" onclick="select_2()" class=""><a href="#">密码说明</a></li>
+			</ul>
+			<!-- 密码输入选项内容 -->
+			<div id="psw-input" style="padding-bottom: 200px;">
+				<div class="input-group input-group-lg" style="margin-top: 200px; margin-left: 100px;">
+				  <span class="input-group-addon" id="basic-addon1">请输入密码：</span>
+				  <input type="text" class="form-control" id="password" placeholder="点击上方查看密码说明" aria-describedby="basic-addon1" style="width: 300px;">
 				</div>
-				
-				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2" id="week"></div>
-				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<button type="button" id="submit_button" onclick="submit()">
+					<span style="font-size: 20px;">确认提交</span>
+				</button>
 			</div>
-			
-			<!-- 30 像素分割 -->
-			<div id="date_sep" style="height: 30px;"></div>
-			
-			
-			<!-- 第二行：显示日期 -->
-			<!-- 口XX月口XX日口星期口 -->
-			<div class="row">
-				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM1"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM2"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM">
-					<img src="img/0-9/month.png" style="height: 90px;" >
-				</div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd1"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd2"></div>
-				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd">
-					<img src="img/0-9/day.png" style="height: 90px;">
-				</div>
-				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
-			</div>
-			
-			<!-- 30 像素分割 -->
-			<div id="date_sep" style="height: 30px;"></div>
-			
-			<!-- 第三行：显示时间 -->
-			<!-- 口口XX：XX：XX口口 -->
-			<div class="row">
-				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh1"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh2"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_1">
-					<img src="img/0-9/time_sep.png" height="90px">
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm1"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm2"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_2">
-					<img src="img/0-9/time_sep.png" height="90px">
-				</div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss1"></div>
-				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss2"></div>
-				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			<!-- 密码说明内容 -->
+			<div id="psw-desc" style="display: none; margin-left: 100px; padding-bottom: 150px;">
+				<ol>
+					<hr >
+					<li class="desc-li">密码由纯数字组成</li>
+					<hr >
+					<li class="desc-li">密码一共8位</li>
+					<hr >
+					<li class="desc-li">密码的加密次数仅1次</li>
+					<hr >
+					<li class="desc-li">密码提示获取范围：本网页</li>
+					<hr >
+					<li class="desc-li">不要放过任何细节</li>
+					<hr >
+					<li class="desc-li">不要放过任何细节</li>
+					<hr >
+					<li class="desc-li">不要放过任何细节</li>
+					<hr >
+				</ol>
 			</div>
 		</div>
-		
-		
-		
-		
-		
-		<!-- 计算出数字 -->
 		<script type="text/javascript">
-			function get_time() {
-				now = new Date();
-				let year = now.getFullYear();
-				let month = now.getMonth() + 1;
-				let date = now.getDate();
-				let day = now.getDay();
-			
-				let hour = now.getHours();
-				let minute = now.getMinutes();
-				let second = now.getSeconds();
+			function select_1(){
+				document.getElementById("sub_select_1").setAttribute("class", "active");
+				document.getElementById("sub_select_2").setAttribute("class", "");
 				
-				let y1 = Math.floor(year/1000 % 10);
-				let y2 = Math.floor(year/100 % 10);
-				let y3 = Math.floor(year/10 % 10);
-				let y4 = Math.floor(year/1 % 10);
-				
-				let M1 = Math.floor(month / 10);
-				let M2 = Math.floor(month % 10);
-				
-				let d1 = Math.floor(date / 10);
-				let d2 = Math.floor(date % 10);
-				
-				let h1 = Math.floor(hour / 10);
-				let h2 = Math.floor(hour % 10);
-				
-				let m1 = Math.floor(minute / 10);
-				let m2 = Math.floor(minute % 10);
-				
-				let s1 = Math.floor(second / 10);
-				let s2 = Math.floor(second % 10);
-				
-				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 90px;' />";
-				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 90px;' />";
-				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 90px;' />";
-				document.getElementById("yyyy4").innerHTML = "<img src='img/0-9/time-" + y4 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("MM1").innerHTML = "<img src='img/0-9/time-" + M1 + ".png' style='height: 90px;' />";
-				document.getElementById("MM2").innerHTML = "<img src='img/0-9/time-" + M2 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("dd1").innerHTML = "<img src='img/0-9/time-" + d1 + ".png' style='height: 90px;' />";
-				document.getElementById("dd2").innerHTML = "<img src='img/0-9/time-" + d2 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("hh1").innerHTML = "<img src='img/0-9/time-" + h1 + ".png' style='height: 90px;' />";
-				document.getElementById("hh2").innerHTML = "<img src='img/0-9/time-" + h2 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("mm1").innerHTML = "<img src='img/0-9/time-" + m1 + ".png' style='height: 90px;' />";
-				document.getElementById("mm2").innerHTML = "<img src='img/0-9/time-" + m2 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 90px;' />";
-				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 90px;' />";
-				
-				document.getElementById("week").innerHTML = "<img src='img/0-9/day-" + day + ".png' style='height: 78px;' />";
-				
+				document.getElementById("psw-desc").style.display="none";
+				document.getElementById("psw-input").style.display="";
 			}
-			setInterval("get_time()", 1000);
 			
 			
+			function select_2(){
+				document.getElementById("sub_select_1").setAttribute("class", "");
+				document.getElementById("sub_select_2").setAttribute("class", "active");
+				
+				document.getElementById("psw-desc").style.display="";
+				document.getElementById("psw-input").style.display="none";
+			}
+			
+			
+			function submit(){
+				var password = document.getElementById("password").value;
+				// 密码校对
+				if (password == "06061018") {
+					alert("密码输入正确");
+				} else{
+					alert("密码输入错误");
+				}
+			}
 		</script>
+
+
 
 
 		<!-- 页脚 -->
@@ -218,4 +163,5 @@
 		</div>
 
 	</body>
+
 </html>

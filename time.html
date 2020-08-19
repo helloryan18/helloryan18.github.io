@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			#clock_display{
+				border: 0px solid red;
+			}
+			.nowDate1{
+				border: 0px solid blue;
+				height: 90px;
+				text-align: center;
+				padding: 0px;
+			}
+			.nowDate2{
+				border: 0px solid blue;
+				height: 90px;
+				text-align: center;
+				padding: 0px;
+			}
+			.nowDate3{
+				border: 0px solid blue;
+				height: 90px;
+				text-align: center;
+				padding: 0px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			<img src="img/format/heading.jpg"  style="width: 100%;"/>
+		</div>
+
+		<!-- 导航条 -->
+		<nav class="navbar navbar-inverse" style="margin-top: 2px; margin-bottom: 30px;">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" style="font-size: 25px;">首页</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class=""><a href="#" style="font-size: 18px;">Page 1 </a></li>
+						<li class=""><a href="#" style="font-size: 18px;">Page 2</a></li>
+						<!-- <li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">Separated link</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">One more separated link</a></li>
+							</ul>
+						</li> -->
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+
+		<!-- 美国时间显示 -->
+		<div id="clock_display" style="background-image: url(img/format/bgImg.png); height: 400px; padding-top: 20px;">
+			<!-- 第一行：显示年份 -->
+			<!-- 口口口XXXX年口口口口 -->
+			<div class="row">
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy1"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy2"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy3"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy4"></div>
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="yyyy">
+					<img src="img/0-9/year.png" style="height: 90px;">
+				</div>
+				
+				<div class="nowDate1 col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2" id="week"></div>
+				<div class="nowDate1 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			</div>
+			
+			<!-- 30 像素分割 -->
+			<div id="date_sep" style="height: 30px;"></div>
+			
+			
+			<!-- 第二行：显示日期 -->
+			<!-- 口XX月口XX日口星期口 -->
+			<div class="row">
+				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM1"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM2"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="MM">
+					<img src="img/0-9/month.png" style="height: 90px;" >
+				</div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd1"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd2"></div>
+				<div class="nowDate2 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="dd">
+					<img src="img/0-9/day.png" style="height: 90px;">
+				</div>
+				<div class="nowDate2 col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+			</div>
+			
+			<!-- 30 像素分割 -->
+			<div id="date_sep" style="height: 30px;"></div>
+			
+			<!-- 第三行：显示时间 -->
+			<!-- 口口XX：XX：XX口口 -->
+			<div class="row">
+				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="hh2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_1">
+					<img src="img/0-9/time_sep.png" height="90px">
+				</div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="mm2"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="time_sep_2">
+					<img src="img/0-9/time_sep.png" height="90px">
+				</div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss1"></div>
+				<div class="nowDate3 col-lg-1 col-md-1 col-sm-1 col-xs-1" id="ss2"></div>
+				<div class="nowDate3 col-lg-2 col-md-2 col-sm-2 col-xs-2"></div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<!-- 计算出数字 -->
+		<script type="text/javascript">
+			function get_time() {
+				now = new Date();
+				let year = now.getFullYear();
+				let month = now.getMonth() + 1;
+				let date = now.getDate();
+				let day = now.getDay();
+			
+				let hour = now.getHours();
+				let minute = now.getMinutes();
+				let second = now.getSeconds();
+				
+				let y1 = Math.floor(year/1000 % 10);
+				let y2 = Math.floor(year/100 % 10);
+				let y3 = Math.floor(year/10 % 10);
+				let y4 = Math.floor(year/1 % 10);
+				
+				let M1 = Math.floor(month / 10);
+				let M2 = Math.floor(month % 10);
+				
+				let d1 = Math.floor(date / 10);
+				let d2 = Math.floor(date % 10);
+				
+				let h1 = Math.floor(hour / 10);
+				let h2 = Math.floor(hour % 10);
+				
+				let m1 = Math.floor(minute / 10);
+				let m2 = Math.floor(minute % 10);
+				
+				let s1 = Math.floor(second / 10);
+				let s2 = Math.floor(second % 10);
+				
+				document.getElementById("yyyy1").innerHTML = "<img src='img/0-9/time-" + y1 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy2").innerHTML = "<img src='img/0-9/time-" + y2 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy3").innerHTML = "<img src='img/0-9/time-" + y3 + ".png' style='height: 90px;' />";
+				document.getElementById("yyyy4").innerHTML = "<img src='img/0-9/time-" + y4 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("MM1").innerHTML = "<img src='img/0-9/time-" + M1 + ".png' style='height: 90px;' />";
+				document.getElementById("MM2").innerHTML = "<img src='img/0-9/time-" + M2 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("dd1").innerHTML = "<img src='img/0-9/time-" + d1 + ".png' style='height: 90px;' />";
+				document.getElementById("dd2").innerHTML = "<img src='img/0-9/time-" + d2 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("hh1").innerHTML = "<img src='img/0-9/time-" + h1 + ".png' style='height: 90px;' />";
+				document.getElementById("hh2").innerHTML = "<img src='img/0-9/time-" + h2 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("mm1").innerHTML = "<img src='img/0-9/time-" + m1 + ".png' style='height: 90px;' />";
+				document.getElementById("mm2").innerHTML = "<img src='img/0-9/time-" + m2 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("ss1").innerHTML = "<img src='img/0-9/time-" + s1 + ".png' style='height: 90px;' />";
+				document.getElementById("ss2").innerHTML = "<img src='img/0-9/time-" + s2 + ".png' style='height: 90px;' />";
+				
+				document.getElementById("week").innerHTML = "<img src='img/0-9/day-" + day + ".png' style='height: 78px;' />";
+				
+			}
+			setInterval("get_time()", 1000);
+			
+			
+		</script>
+
+
+		<!-- 页脚 -->
+		<hr style="margin-top: 30px;">
+		<div style="text-align: center; margin-bottom:20px;">
+			Copyright &copy; <a href="#">2019-2020</a> RyanFeng.AllRightsReserved.
+		</div>
+
+	</body>
+</html>
