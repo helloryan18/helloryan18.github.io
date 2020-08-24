@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Key Date</title>
+		<!-- Bootstrap -->
+		<link href="./css/bootstrap.css" rel="stylesheet">
+
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./js/bootstrap.js"></script>
+		<script src="./js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<style type="text/css">
+			div {
+				border: 0px solid red;
+			}
+
+			body {
+				width: 95%;
+				margin: 2.5%;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload() = function() {
+
+			}
+		</script>
+	</head>
+
+	<body style="background-image: url(img/format/bgImg.png);">
+		<div>
+			<img src="img/format/heading.jpg" style="width: 100%;" />
+		</div>
+
+		<!-- 导航条 -->
+		<nav class="navbar navbar-inverse" style="margin-top: 2px; margin-bottom: 30px; height: 70px; padding-top: 15px;">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="main.html" style="font-size: 40px;">首页</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" style="font-size: 30px;">KeyDate</a></li>
+						<li class=""><a href="#" style="font-size: 30px;">敬请期待。。。</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+
+		<!-- 顶部视频 -->
+		<div id="top" style="border-radius: 20px; text-align: center; margin-top: 150px; margin-bottom: 100px;">
+			<video id="top-video" controls="controls" preload="auto" playsinline width="800px" poster="./img/memoryPage/cover.png">
+				<source src="https://apd-ae3ec3819bc02d0e36fcb63fd821c478.v.smtcdns.com/om.tc.qq.com/ABMFBu4vrpr5rjpVJJcJxjUJdqSL5HMVjDy4DgK6ByPo/uwMROfz2r5zBIaQXGdGk42dfJ6rwreLg2jl6I1bUUMjZjzhi/a01255y1jm5.p702.1.mp4?sdtfrom=v1010&guid=c1dcf62616fe7b6cf60d45e8c7ebf24e&vkey=0B896DECF3D99370E842DC488BCC05D163F86C822751EAEFB2816EED79A4E8D5B582C4B3425C954890311CE9B106CE4BC5155F29B6C0D10337EEA04C3079CD9F6B659DC7EF5CC0A35AA7135677EDF5B0BF6378F0DD2D48CAAFB944CAD8341FB8562204CE5E51DA04C56807B65097976D0591C70DC6A8036DE146BCE7667955F8#t=0"
+				 type="video/mp4">
+				</source>
+			</video>
+		</div>
+
+
+		<!-- 纪念日对象 -->
+		<div class="memory-obj">
+			<img src="img/indexPage/A4569AE4-7B0C-4F6C-8A88-A1D9E288E263_1_105_c.jpeg" width="100%" height="400px" style="object-fit: cover;">
+			<div class="text">
+				<div class="text-title" style="color: navajowhite;">「很高兴认识你」</div>
+				<div class="text-desc" id="text-1" style="color: navajowhite;"></div>
+			</div>
+		</div>
+
+		<div class="memory-obj">
+			<img src="img/indexPage/F14A3A6C-FB63-4770-B964-2648DFB29CD6_1_105_c.jpeg" width="100%" height="400px">
+			<div class="text">
+				<div class="text-title" style="color: white;">「郭小倩」</div>
+				<div class="text-desc" id="text-2"  style="color: white;">222</div>
+			</div>
+		</div>
+		<div class="memory-obj">
+			<img src="img/indexPage/06B891D2-0FD9-495E-8DFD-93C7D60E2DD5_1_105_c.jpeg" width="100%" height="400px">
+			<div class="text">
+				<div class="text-title">「冯威远」</div>
+				<div class="text-desc" id="text-3"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var now = new Date().getTime();
+			var meet = 1537944540000;
+			var GXQ = 928652400000;
+			var FWY = 813999600000;
+			document.getElementById("text-1").innerHTML = Math.floor((now - meet) / (24 * 3600 * 1000)) + " 天 " + Math.floor(((
+				now - meet) % (24 * 3600 * 1000)) / (3600000)) + " 小时 ";
+			document.getElementById("text-2").innerHTML = Math.floor((now - GXQ) / (24 * 3600 * 1000)) + " 天 ";
+			document.getElementById("text-3").innerHTML = Math.floor((now - FWY) / (24 * 3600 * 1000)) + " 天 ";
+		</script>
+
+
+		<!-- 页脚 -->
+		<hr style="margin-top: 30px;">
+		<div style="text-align: center; margin-bottom:20px;">
+			Copyright &copy; <a href="#">2019-2020</a> RyanFeng.AllRightsReserved.
+		</div>
+
+	</body>
+
+</html>
